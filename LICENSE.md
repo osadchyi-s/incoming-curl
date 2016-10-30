@@ -1,3 +1,5 @@
+# GNU GENERAL PUBLIC LICENSE
+
 Copyright (c) 2016 Osachyi Serhii <sergijlys@gmail.com>
 
                     GNU GENERAL PUBLIC LICENSE
