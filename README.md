@@ -30,9 +30,9 @@ $IC->setHeaders([
         'Content-Type'=> ['appliation/json']
     ]
 ]);
-$IC->getMethod('GET');
+$IC->setMethod('GET');
 
-$curlLine $IC->makeCurlCommandLine();
+$curlLine = $IC->makeCurlCommandLine();
 ```
 
 ## Credits
@@ -42,4 +42,4 @@ $curlLine $IC->makeCurlCommandLine();
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The GPL3 License. Please see [License File](LICENSE.md) for more information.
