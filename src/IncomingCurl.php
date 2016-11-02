@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class IncomingCurl
 {
-    const CURL_COMMAND = 'curl -X';
+    const CURL_COMMAND = 'curl -i';
 
     protected $request;
     protected $headers;
@@ -45,9 +45,7 @@ class IncomingCurl
         $headers = $this->getHeaders();
         if (!empty($headers) && count($headers)) {
             foreach ($headers as $name => $header) {
-                if ($header[0]) {
-                    $curlCommand.= ' -H "'. ucwords($name) .': '.$header[0].'"';
-                }
+                $curlCommand.= ' -H "'. ucwords($name) .': ' .  implode('; ', $header) . '"';
             }
         }
         if ($this->getBody()) {
